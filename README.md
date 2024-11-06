@@ -1,2 +1,5 @@
 # SimpleplaneFirecontrol
 simpleplane AA controll
+
+基于三角函数测距以及相对距离的火控系统，确定对方和我方的直线距离后可以通过两套公式解算出对应的方向角和火炮的倾斜角，水平方向为顺时针135到逆时针135度，炮弹速度800m/s
+
