@@ -1,0 +1,17 @@
+<Parts>
+    <Part id="1" partType="JointRotator-1" position="7.271767E-06,18.00005,35.58502" rotation="0,0,0"
+          drag="0,0,0,0,0,0" materials="0,3,10" disableAircraftCollisions="true" scale="1,0.25,1" health="1E+07"
+          partCollisionResponse="Default">
+        <InputController.State activationGroup="1" invert="true" min="-1" max="1"
+                               input="clamp(((((TargetHeading-Heading+rate(TargetHeading)*(((800*(TargetDistance*9.81)/(pow(800, 2))/2)/9.81) * 2))/180)*clamp01(TargetDistance< 100000) * clamp01(TargetDistance > 1))-(2*max(0,((((TargetHeading-Heading+rate(TargetHeading)*(((800*(TargetDistance*9.81)/(pow(800, 2))/2)/9.81) * 2))/180)*clamp01(TargetDistance <100000) * clamp01(TargetDistance>1))-1)))),-0.66,0.66)"/>
+        <JointRotator.State range="180" speed="1E+07" damperMultiplier="65536">
+            <Variables/>
+        </JointRotator.State>
+    </Part>
+    <Part id="2" partType="SmallRotator-1" position="-1.050601,16.90028,55.61783" rotation="0,90,0" drag="0,0,0,0,0,0" materials="0,3,10" disableAircraftCollisions="true" scale="1.061684,1.061683,1.07584" massScale="8" health="1E+07" partCollisionResponse="Default">
+        <InputController.State activationGroup="5" invert="false" min="0" max="1" input="clamp((TargetElevation+rate(TargetElevation)*(((800*sin(asin((TargetDistance*9.81)/(pow(800,2)))/2))/9.81)*2))+(asin(((TargetDistance+rate(TargetDistance)*(((800*sin(asin((TargetDistance*9.81)/(pow(800,2)))/2))/9.81)*2))*9.81)/(pow(800, 2)))/2),-10,45)/45" />
+        <JointRotator.State range="45" speed="10" damperMultiplier="10000" disableBaseMesh="true">
+            <Variables />
+        </JointRotator.State>
+    </Part>
+</Parts>
